@@ -51,6 +51,19 @@ export interface BadRequestResponseDto {
 /**
  * 
  * @export
+ * @interface EmailConfirmationRequiredResponseDto
+ */
+export interface EmailConfirmationRequiredResponseDto {
+    /**
+     * An informational message indicating the need for email confirmation
+     * @type {string}
+     * @memberof EmailConfirmationRequiredResponseDto
+     */
+    'message': string;
+}
+/**
+ * 
+ * @export
  * @interface LoginRequestDto
  */
 export interface LoginRequestDto {
@@ -61,13 +74,13 @@ export interface LoginRequestDto {
      */
     'email': string;
     /**
-     * The password of the user (minimum 8 characters)
+     * The password of the user
      * @type {string}
      * @memberof LoginRequestDto
      */
     'password': string;
     /**
-     * The new password to set for the user (optional, minimum 8 characters)
+     * The new password to set for the user (optional)
      * @type {string}
      * @memberof LoginRequestDto
      */
@@ -143,7 +156,7 @@ export interface RegisterRequestDto {
      */
     'email': string;
     /**
-     * The password of the user (minimum 8 characters)
+     * The password of the user
      * @type {string}
      * @memberof RegisterRequestDto
      */
